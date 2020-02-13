@@ -3,11 +3,40 @@ using System;
 
 namespace test
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private string name;
+        private int age;
+
+        public Program()
         {
-            Console.WriteLine("Hello World!");
+            name = string.Empty;
+            age = 0;
+        }
+
+        public string name_bulid    
+        {
+            get {return this.name;}
+
+            set
+            {
+                this.name = value;
+            }
+        }
+
+        public int age_bulid
+        {
+            get { return this.age; }
+
+            set
+            {
+                this.age = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            return "Name = " + name + ", Age = " + age;
         }
     }
 }
